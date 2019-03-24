@@ -1,0 +1,48 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using System.Data.SqlClient;
+
+namespace accou
+{
+    public partial class department : Form
+    {
+        public department()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "")
+            { MessageBox.Show("يوجد خطأ بالإدخال"); }
+
+            SqlConnection con = new SqlConnection(Class1.x);
+            con.Open();
+            SqlCommand com1 = new SqlCommand("select d_name from department where d_name = @d_name", con);
+            SqlParameter p1 = new SqlParameter("@d_name", textBox1.Text);
+            com1.Parameters.Add(p1);
+            com1.CommandType = CommandType.Text;
+            SqlDataReader reder1 = com1.ExecuteReader();
+            if (reder1.HasRows == true) { MessageBox.Show("القسم موجود مسبقاً"); reder1.Close(); }
+           
+            else 
+            {
+
+            SqlCommand com = new SqlCommand("INSERT INTO department (d_name) VALUES  (@d_name)", con);
+            SqlParameter p = new SqlParameter("@d_name", textBox1.Text);
+            com.Parameters.Add(p);
+            com.CommandType = CommandType.Text;
+            SqlDataReader reder = com.ExecuteReader();
+            MessageBox.Show("تمت الأضافة"); reder.Close();
+            }
+            con.Close();
+            textBox1.Text ="";
+        }
+    }
+}

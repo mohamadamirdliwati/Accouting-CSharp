@@ -1,0 +1,9 @@
+F:\فلاشتي\مشاريع\accou\accou\obj\Debug\ResolveAssemblyReference.cache
+F:\فلاشتي\مشاريع\accou\accou\obj\Debug\accou.Properties.Resources.resources
+F:\فلاشتي\مشاريع\accou\accou\obj\Debug\accou.csproj.GenerateResource.Cache
+F:\فلاشتي\مشاريع\accou\accou\bin\Debug\accou.exe
+F:\فلاشتي\مشاريع\accou\accou\bin\Debug\accou.pdb
+F:\فلاشتي\مشاريع\accou\accou\obj\Debug\accou.exe
+F:\فلاشتي\مشاريع\accou\accou\obj\Debug\accou.pdb
+F:\فلاشتي\مشاريع\accou\accou\obj\Debug\accou.login.resources
+F:\فلاشتي\مشاريع\accou\accou\obj\Debug\accou.menu.resources
